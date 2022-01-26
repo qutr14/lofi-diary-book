@@ -211,6 +211,8 @@ var createPosts = (data) => {
             document.querySelector('.close-diary-btn').click()
             document.querySelector('input[name = "title"]').value = '';
             document.querySelector('textarea[name = "content"]').value = '';
+            document.querySelector('input[name = "link"]').value = '';
+            document.querySelector('input[name = "date"]').value = '';
             return post
         })
         .then((posts) => {
