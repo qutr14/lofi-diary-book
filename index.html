@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Poppins&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+  <title>Memories</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <button class="open-diary-btn">DIARY
+        <span class="open-diary-underline"></span>
+      </button>
+      <div class="music-type">
+        <button class="type-sleep mood-category"><i class="fas fa-moon"></i><span
+            class="music-type-text">Sleep</span></button>
+        <button class="type-chill mood-category active"><i class="fas fa-coffee"></i><span
+            class="music-type-text active">Chill</span></button>
+      </div>
+      <div class="view-setting">
+        <label class="switch">
+          <input class="input" type="checkbox">
+          <span class="slider"><i class="fas fa-sun"></i></span>
+        </label>
+        <button class="weather-button"><i class="fas fa-cloud-rain"></i></button>
+      </div>
+    </header>
+    <video class="bg-video" src="./videos/Day-rainny.mp4" autoplay loop muted></video>
+    <video class="bg-video" src="./videos/Night-rainny.mp4" autoplay loop muted></video>
+    <video class="bg-video" src="./videos/Night-clear.mp4" autoplay loop muted></video>
+    <video class="bg-video" src="./videos/Day-sunny.mp4" autoplay loop muted></video>
+    <audio class="music-chill" src="./audios/musics/chill1.mp3"></audio>
+    <audio class="sound" src="./audios/sounds/rain_city.mp3" loop></audio>
+    <div class="controls">
+      <button class="prev-button"><img src="./images/prev.svg" alt=""></button>
+      <button class="play-button"><img src="./images/play.svg" alt=""></button>
+      <button class="next-button"><img src="./images/next.svg" alt=""></button>
+    </div>
+    <div class="diary">
+      <button class="close-diary-btn"><i class="fas fa-times"></i></button>
+      <div class="diary-container">
+        <div class="diary-form">
+          <label for="" class="diary-form-label">TITLE</label>
+          <input id="title" name="title" type="text" class="form-title-input">
+          <br>
+          <br>
+          <label for="" class="diary-form-label">CONTENT</label>
+          <textarea name="content" id="content" cols="40" rows="10" class="form-content-textarea"></textarea>
+          <br>
+          <br>
+          <label for="" class="diary-form-label">PHOTO'S LINK</label>
+          <input id="link" name="link" type="text" class="form-title-input">
+          <br>
+          <br>
+          <label class="diary-form-label">DATE</label>
+          <input id="date" name="date" type="text" class="form-title-input" placeholder="dd/mm/yyyy">
+          <br>
+          <br>
+          <label for="" class="diary-form-label">IMAGE</label>
+          <div class="form-file-input">
+            <input id="upfile" name="image" type="file" style="display: none;">
+            <button id="custom-upfile-btn" class="custom-upfile-btn"><i class="fas fa-paperclip"></i><span>Add
+                image</span></button>
+          </div>
+          <button class="form-add-btn">DONE</button>
+        </div>
+      </div>
+    </div>
+    <div id="diary-posts-container" class="diary-posts-container">
+      <button class="add-diary"><i class="fas fa-plus"></i></button>
+      <button onclick="this.parentElement.style.transform = `translateX(-100%)`" class="close-diary-btn"><i
+          class="fas fa-times"></i></button>
+      <button class="add-diary"><i class="fas fa-exclamation"></i></button>
+      <div class="notice">Please refresh website everytime you want to add a new post</div>
+      <ul id="diary-posts"></ul>
+    </div>
+    <div class="focus-mode">
+      <div class="todo-wrapper">
+        <button class="focus-mode-btn todo-btn"><i class="fas fa-clipboard-list"></i></button>
+        <div class="todo-container">
+          <div class="input-label">Your to do list</div>
+          <input type="text" class="todo-input" id="todo-input" placeholder="What are you going to do, today?">
+          <button class="todo-input-btn"><i class="fas fa-plus"></i></button>
+          <div class="todos-show">
+          </div>
+        </div>
+      </div>
+      <div class="timer-wrapper">
+        <button class="focus-mode-btn timer-btn"><i class="fas fa-hourglass-start"></i></button>
+        <div class="timer-container">
+          <div class="input-label">Focus mode</div>
+          <div class="input-container">
+            <div class="input-item"><input type="text" class="timer-input hour-input" id="hour-input"
+                value="0"><span>hours</span></div>
+            <div class="input-item"><input type="text" class="timer-input minute-input" id="minute-input"
+                value="0"><span>minutes</span></div>
+            <div class="input-item"><input type="text" class="timer-input second-input" id="second-input"
+                value="0"><span>seconds</span></div>
+          </div>
+          <div class="timer-btn-container">
+            <button class="set-timer-btn timer-control-btn"><i class="fas fa-plus"></i></button>
+            <button class="cancle-timer-btn timer-control-btn"><i class="fas fa-pause"></i></button>
+            <button class="pause-timer-btn timer-control-btn"><i class="fas fa-play"></i></button>
+          </div>
+          <button class="notice-btn"><i class="fas fa-exclamation"></i></button>
+          <div class="notice">Please refresh website everytime you want to set a new countdown timer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
