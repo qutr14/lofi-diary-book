@@ -692,11 +692,13 @@ body {
   outline: none;
   border: 2px solid #f3a952;
   border-radius: 5px;
+  font-size: 17px;
 }
 .input-item {
   display: flex;
   gap: 5px;
   font-family: "Poppins", cursive;
+  align-items: center;
 }
 .timer-show {
   box-sizing: border-box;
