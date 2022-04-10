@@ -215,21 +215,21 @@ var createPosts = (data) => {
             document.querySelector('input[name = "date"]').value = '';
             return post
         })
-//         .then((posts) => {
-//             // diaryPosts.innerHTML += `<li class="post-item new-post-item post-item-${posts.id}" style = "background-image: url(${posts.imageURL});background-size: cover; background-position: center">
-//             // <div class="post-item-details"></div>
-//             // <h3>${posts.title}
-//             //     <span>-- ${posts.date} --</span>
-//             // </h3>
-//             // <p class="post-item-content">${posts.content}</p>
-//             // <a target="blank" href=${posts.link}><i class="fas fa-link"></i>Photo's link</a>
-//             // <div class="post-item-controls">
-//             // <button class="controls-btn" onclick="handleDelete(${posts.id})"><i class="far fa-trash-alt"></i></button>
-//             // <button class="controls-btn openClose-btn-${posts.id}" onclick="openClosePost(${posts.id})"><i class="fas fa-search-plus"></i></button>
-//             // </div>
-//             // </li> `
-//             getPosts(renderPosts)
-//         })
+        .then((posts) => {
+            // diaryPosts.innerHTML += `<li class="post-item new-post-item post-item-${posts.id}" style = "background-image: url(${posts.imageURL});background-size: cover; background-position: center">
+            // <div class="post-item-details"></div>
+            // <h3>${posts.title}
+            //     <span>-- ${posts.date} --</span>
+            // </h3>
+            // <p class="post-item-content">${posts.content}</p>
+            // <a target="blank" href=${posts.link}><i class="fas fa-link"></i>Photo's link</a>
+            // <div class="post-item-controls">
+            // <button class="controls-btn" onclick="handleDelete(${posts.id})"><i class="far fa-trash-alt"></i></button>
+            // <button class="controls-btn openClose-btn-${posts.id}" onclick="openClosePost(${posts.id})"><i class="fas fa-search-plus"></i></button>
+            // </div>
+            // </li> `
+            getPosts(renderPosts)
+        })
         .then(() => {
             setTimeout(() => { diaryPostsContainer.style.transform = `translateX(0)` }, 350)
             diaryPosts.scrollBy(0, 1446)
