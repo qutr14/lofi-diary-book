@@ -228,7 +228,7 @@ var createPosts = (data) => {
             // <button class="controls-btn openClose-btn-${posts.id}" onclick="openClosePost(${posts.id})"><i class="fas fa-search-plus"></i></button>
             // </div>
             // </li> `
-            getPosts(renderPosts)
+            renderPosts
         })
         .then(() => {
             setTimeout(() => { diaryPostsContainer.style.transform = `translateX(0)` }, 350)
