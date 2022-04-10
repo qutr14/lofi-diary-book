@@ -317,7 +317,6 @@ inputImage.addEventListener('change', (e) => {
             };
             uploadBtn.addEventListener('click', function () {
                 createPosts(formData);
-                getPosts(renderPosts)
             })
         };
     })(file);
